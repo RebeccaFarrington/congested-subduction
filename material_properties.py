@@ -5,7 +5,8 @@ import model_properties as modprop
 
 alpha   = 3.0e-5 / u.degK
 
-mantle_density = 3400 * u.kilogram / u.metre**3 # at surface
+mantle_density   = 3400 * u.kilogram / u.metre**3 # at surface
+eclogite_density = (((7.*3500* u.kilogram / u.metre**3)+(25.-7.)*2900  * u.kilogram / u.metre**3)/25.)
 
 ref_density    = mantle_density * (modprop.Tint-modprop.Tsurf) * alpha
 
@@ -26,7 +27,6 @@ lm = {
     'cohesion' : 1e3 * u.megapascal,
 }
 
-eclogite_density = (((7.*3500* u.kilogram / u.metre**3)+(25.-7.)*2900  * u.kilogram / u.metre**3)/25.).magnitude
 
 # 80Ma oceanic lithosphere
 subplate1 = {
