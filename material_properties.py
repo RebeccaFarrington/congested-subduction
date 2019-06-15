@@ -5,10 +5,9 @@ import model_properties as modprop
 
 alpha   = 3.0e-5 / u.degK
 
+# Density is defined using the dimensionless relative density
 mantle_density   = 3400 * u.kilogram / u.metre**3 # at surface
-eclogite_density = (((7.*3500* u.kilogram / u.metre**3)+(25.-7.)*2900  * u.kilogram / u.metre**3)/25.)
-
-ref_density    = mantle_density * (modprop.Tint-modprop.Tsurf) * alpha
+ref_density      = mantle_density * (modprop.Tint-modprop.Tsurf) * alpha
 
 # Material properties
 um = {
@@ -34,7 +33,7 @@ subplate1 = {
     'index'    : 3,
     'viscosity':  1e5 * u.pascal * u.second * 1e20, 
     'density'  : -0.34 * ref_density,
-    'density2' : eclogite_density,
+    'density2' :  0.87 * ref_density,
     'cohesion' : 12.5  * u.megapascal,
     'cohesion2':  6.25 * u.megapascal,         # this is an estimate from Extended Data Figure 2 plot
 }
