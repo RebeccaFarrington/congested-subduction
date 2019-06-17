@@ -68,20 +68,20 @@ subplate4 = {
 
 # strong back arc material properties
 backArc1 = {
-    'name'     : 'ribbon1',
+    'name'     : 'backArc1',
     'index'    : 7,
     'viscosity': 88797. * u.pascal * u.second * 1e20, 
     'density'  : -1.20 * ref_density,
-    'cohesion' : 76.9 * u.megapascal,
-    'cohesion2': 38.4 * u.megapascal,
+    'cohesion' : 85.  * u.megapascal,
+    'cohesion2': 42.5 * u.megapascal,
 }
 backArc2 = {
-    'name'     : 'ribbon2',
+    'name'     : 'backArc2',
     'index'    : 8,
     'viscosity': 172. * u.pascal * u.second * 1e20, 
     'density'  : 0.12 * ref_density,
-    'cohesion' : 184.6 * u.megapascal,
-    'cohesion2':  92.3 * u.megapascal,
+    'cohesion' : 170. * u.megapascal,
+    'cohesion2':  85. * u.megapascal,
 }
 
 trans1 = {
@@ -89,16 +89,16 @@ trans1 = {
     'index'    : 9,
     'viscosity':  1e5 * u.pascal * u.second * 1e20, 
     'density'  : -1.98 * ref_density,
-    'cohesion' : 40. * u.megapascal,
-    'cohesion2': 20. * u.megapascal,
+    'cohesion' : 1e3 * u.megapascal,
+    'cohesion2': 1e3 * u.megapascal,
 }
 trans2 = {
     'name'     : 'trans2',
     'index'    : 10,
-    'viscosity':  1e5 * u.pascal * u.second * 1e20, 
+    'viscosity': 1.2e4 * u.pascal * u.second * 1e20, 
     'density'  : 0.25 * u.kilogram / u.metre**3,
-    'cohesion' : 150. * u.megapascal,
-    'cohesion2':  75. * u.megapascal,
+    'cohesion' : 1e3 * u.megapascal,
+    'cohesion2': 1e3 * u.megapascal,
 }
 
 craton1 = {
@@ -106,8 +106,8 @@ craton1 = {
     'index'    : 11,
     'viscosity':  1e5 * u.pascal * u.second * 1e20, 
     'density'  : -2.11* ref_density,
-    'cohesion' : 130. * u.megapascal,
-    'cohesion2':  65. * u.megapascal,
+    'cohesion' : 1e3 * u.megapascal,
+    'cohesion2': 1e3 * u.megapascal,
 }
 
 craton2 = {
@@ -115,8 +115,8 @@ craton2 = {
     'index'    : 12,
     'viscosity': 14763. * u.pascal * u.second * 1e20, 
     'density'  : -0.25 * ref_density,
-    'cohesion' : 130. * u.megapascal,
-    'cohesion2':  65. * u.megapascal,
+    'cohesion' : 1e3 * u.megapascal,
+    'cohesion2': 1e3 * u.megapascal,
 }
 
 # assume ribbon and buoyant strip have cratonic material properties
