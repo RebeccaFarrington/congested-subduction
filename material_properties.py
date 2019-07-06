@@ -70,18 +70,24 @@ subplate4 = {
 backArc1 = {
     'name'     : 'backArc1',
     'index'    : 7,
-    'viscosity': 88797. * u.pascal * u.second * 1e20, 
+    'viscosity': 88797.  * u.pascal * u.second * 1e20,   # RF scaling - too strong
+#    'viscosity': 5e3 * u.pascal * u.second * 1e20,   # moresi paper - too weak
     'density'  : -1.20 * ref_density,
-    'cohesion' : 85.  * u.megapascal,
-    'cohesion2': 42.5 * u.megapascal,
+    'cohesion' :  85.  * u.megapascal,   # RF scaling - too strong
+    'cohesion2':  42.5 * u.megapascal,
+#    'cohesion' :  25.  * u.megapascal,   # moresi paper - too weak   
+#    'cohesion2':  12.5 * u.megapascal,
 }
 backArc2 = {
     'name'     : 'backArc2',
     'index'    : 8,
     'viscosity': 172. * u.pascal * u.second * 1e20, 
+#    'viscosity': 5e3 * u.pascal * u.second * 1e20, 
     'density'  : 0.12 * ref_density,
-    'cohesion' : 170. * u.megapascal,
+    'cohesion' : 170. * u.megapascal,   # RF scaling - too strong
     'cohesion2':  85. * u.megapascal,
+#     'cohesion' :  50. * u.megapascal,   # moresi paper - too weak   
+#     'cohesion2':  25. * u.megapascal,
 }
 
 trans1 = {
