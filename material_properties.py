@@ -53,8 +53,7 @@ subplate2 = {
 subplate3 = {
     'name'     : 'oceanic plate 3',
     'index'    : 5,
-#    'viscosity': 1.930e+04 * u.pascal * u.second * 1e20, 
-    'viscosity': 1.000e+04 * u.pascal * u.second * 1e20, # from Moresi xmls
+    'viscosity': 1.930e+04 * u.pascal * u.second * 1e20, 
     'density'  : 3.849e-01 * ref_density + ref_density,
     'cohesion' : 1.213e+02 * u.megapascal,
     'cohesion2': 1.213e+02 * u.megapascal,      
