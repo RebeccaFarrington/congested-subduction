@@ -34,8 +34,8 @@ subplate1 = {
     'name'     : 'oceanic plate 1',
     'index'    : 3,
     'viscosity':  1.000e+05 * u.pascal * u.second * 1e20, 
-    'density'  : -3.388e-01 * ref_density,
-    'density2' :  0.87 * ref_density,
+    'density'  : -3.388e-01 * ref_density + ref_density,
+    'density2' :  0.87 * ref_density + ref_density,
     'cohesion' :  1.250e+01 * u.megapascal,
     'cohesion2':  6.250e+00 * u.megapascal,        
 }
@@ -44,7 +44,7 @@ subplate2 = {
     'name'     : 'oceanic plate 2',
     'index'    : 4,
     'viscosity':  1.000e+05 * u.pascal * u.second * 1e20, 
-    'density'  :  6.040e-01 * ref_density,
+    'density'  :  6.040e-01 * ref_density + ref_density,
     'cohesion' :  6.744e+01  * u.megapascal,
     'cohesion2':  3.372e+01 * u.megapascal,      
 }
@@ -53,8 +53,9 @@ subplate2 = {
 subplate3 = {
     'name'     : 'oceanic plate 3',
     'index'    : 5,
-    'viscosity': 1.930e+04 * u.pascal * u.second * 1e20, 
-    'density'  : 3.849e-01 * ref_density,
+#    'viscosity': 1.930e+04 * u.pascal * u.second * 1e20, 
+    'viscosity': 1.000e+04 * u.pascal * u.second * 1e20, # from Moresi xmls
+    'density'  : 3.849e-01 * ref_density + ref_density,
     'cohesion' : 1.213e+02 * u.megapascal,
     'cohesion2': 1.213e+02 * u.megapascal,      
 }
@@ -63,55 +64,17 @@ subplate4 = {
     'name'     : 'oceanic plate 4',
     'index'    : 6,
     'viscosity': 9.641e+01 * u.pascal * u.second * 1e20, 
-    'density'  : 2.228e-01 * ref_density,
+    'density'  : 2.228e-01 * ref_density + ref_density,
     'cohesion' : 1.000e+03 * u.megapascal,
     'cohesion2': 1.000e+03 * u.megapascal,      
 }
-
-# cratonic lithosphere
-craton1 = {
-    'name'     : 'craton1',
-    'index'    : 11,
-    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
-    'density'  : -2.118e+00 * ref_density,
-    'cohesion' :  1.000e+03 * u.megapascal,
-    'cohesion2':  1.000e+03 * u.megapascal,
-}
-
-craton2 = {
-    'name'     : 'craton2',
-    'index'    : 12,
-    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
-    'density'  :  2.533e-01 * ref_density,
-    'cohesion' :  1.000e+03 * u.megapascal,
-    'cohesion2':  1.000e+03 * u.megapascal,
-}
-
-# transitional lithosphere
-trans1 = {
-    'name'     : 'trans1',
-    'index'    : 9,
-    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
-    'density'  : -1.977e+00 * ref_density,
-    'cohesion' :  1.000e+03 * u.megapascal,
-    'cohesion2':  1.000e+03 * u.megapascal,
-}
-trans2 = {
-    'name'     : 'trans2',
-    'index'    : 10,
-    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
-    'density'  :  2.550e-01 * u.kilogram / u.metre**3,
-    'cohesion' :  1.000e+03 * u.megapascal,
-    'cohesion2':  1.000e+03 * u.megapascal,
-}
-
 
 # weak back arc material properties
 backArc1 = {
     'name'     : 'backArc1',
     'index'    : 7,
     'viscosity':  4.978e+03 * u.pascal * u.second * 1e20,   
-    'density'  : -1.198e+00 * ref_density,
+    'density'  : -1.198e+00 * ref_density + ref_density,
     'cohesion' :  1.250e+01 * u.megapascal,   
     'cohesion2':  6.250e+00 * u.megapascal,
 }
@@ -119,9 +82,42 @@ backArc2 = {
     'name'     : 'backArc2',
     'index'    : 8,
     'viscosity': 1.726e+02 * u.pascal * u.second * 1e20, 
-    'density'  : 1.162e-01 * ref_density,
+    'density'  : 1.162e-01 * ref_density + ref_density,
     'cohesion' : 2.500e+01 * u.megapascal,   
     'cohesion2': 1.250e+01 * u.megapascal,
+}
+
+# transitional lithosphere
+trans1 = {
+    'name'     : 'trans1',
+    'index'    : 9,
+    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
+    'density'  : -1.977e+00 * ref_density + ref_density,
+    'cohesion' :  1.000e+03 * u.megapascal,
+}
+trans2 = {
+    'name'     : 'trans2',
+    'index'    : 10,
+    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
+    'density'  :  2.550e-01 * ref_density + ref_density,
+    'cohesion' :  1.000e+03 * u.megapascal,
+}
+
+# cratonic lithosphere
+craton1 = {
+    'name'     : 'craton1',
+    'index'    : 11,
+    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
+    'density'  : -2.118e+00 * ref_density + ref_density,
+    'cohesion' :  1.000e+03 * u.megapascal,
+}
+
+craton2 = {
+    'name'     : 'craton2',
+    'index'    : 12,
+    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
+    'density'  :  2.533e-01 * ref_density + ref_density,
+    'cohesion' :  1.000e+03 * u.megapascal,
 }
 
 # assume ribbon and buoyant strip have cratonic material properties
@@ -129,18 +125,16 @@ ribbon = {
     'name'     : 'ribbon',
     'index'    : 13,
     'viscosity':  1e5 * u.pascal * u.second * 1e20, 
-    'density'  : -2.11* ref_density,
-    'cohesion' : 130. * u.megapascal,
-    'cohesion2':  65. * u.megapascal,
+    'density'  : -2.11* ref_density + ref_density,
+    'cohesion' : 1e3 * u.megapascal, 
 }
 
 buoyStrip = {
     'name'     : 'buoyStrip',
     'index'    : 14,
     'viscosity':  1e5 * u.pascal * u.second * 1e20,    # strong 
-    'density'  : -2.11* ref_density,   # assume cratonic density
-    'cohesion' : 1e3 * u.megapascal,   # non yeilding 
-    'cohesion2': 1e3 * u.megapascal,   # non yeilding 
+    'density'  : -2.11* ref_density + ref_density,   # assume cratonic density
+    'cohesion' : 1e3 * u.megapascal, 
 }
 
 # define material list
