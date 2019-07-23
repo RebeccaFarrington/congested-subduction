@@ -22,7 +22,7 @@ um = {
 lm = {
     'name'     : 'lower mantle',
     'index'    : 1,
-    'viscosity': 10. * u.pascal * u.second * 1e20, 
+    'viscosity': 100. * u.pascal * u.second * 1e20, 
     'density'  : ref_density,
     'cohesion' : 1e3 * u.megapascal,
     'cohesion2': 1e3 * u.megapascal,
@@ -35,7 +35,9 @@ subplate1 = {
     'index'    : 3,
     'viscosity':  1.000e+05 * u.pascal * u.second * 1e20, 
     'density'  : -3.388e-01 * ref_density + ref_density,
-    'density2' :  0.87 * ref_density + ref_density,
+#    'density'  :  0.000e+00 * ref_density + ref_density,
+    'density2' :  1.107e+00 * ref_density + ref_density,
+#    'density2' :  1.300e+00 * ref_density + ref_density,
     'cohesion' :  1.250e+01 * u.megapascal,
     'cohesion2':  6.250e+00 * u.megapascal,        
 }
@@ -56,7 +58,7 @@ subplate3 = {
     'viscosity': 1.930e+04 * u.pascal * u.second * 1e20, 
     'density'  : 3.849e-01 * ref_density + ref_density,
     'cohesion' : 1.213e+02 * u.megapascal,
-    'cohesion2': 1.213e+02 * u.megapascal,      
+    'cohesion2': 6.066e+01 * u.megapascal,      
 }
 
 subplate4 = {
@@ -97,7 +99,7 @@ trans1 = {
 trans2 = {
     'name'     : 'trans2',
     'index'    : 10,
-    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
+    'viscosity':  1.502e+03 * u.pascal * u.second * 1e20, 
     'density'  :  2.550e-01 * ref_density + ref_density,
     'cohesion' :  1.000e+03 * u.megapascal,
 }
@@ -114,7 +116,7 @@ craton1 = {
 craton2 = {
     'name'     : 'craton2',
     'index'    : 12,
-    'viscosity':  5.000e+03 * u.pascal * u.second * 1e20, 
+    'viscosity':  1.675e+03 * u.pascal * u.second * 1e20, 
     'density'  :  2.533e-01 * ref_density + ref_density,
     'cohesion' :  1.000e+03 * u.megapascal,
 }
